@@ -11,7 +11,7 @@ export default function List() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch("http://localhost:3030/data");
+      const response = await fetch("https://mit-seo-server-28d77e4d9860.herokuapp.com/data/data");
       const jsonData = await response.json();
       jsonData
               .sort((a,b) => a.question_id - b.question_id)
@@ -34,7 +34,7 @@ export default function List() {
       updatedItem[fieldName] = updatedText;
       setEditingId(null);
       // Send updated data to the server
-      await fetch(`http://localhost:3030/data/${id}`, {
+      await fetch(`https://mit-seo-server-28d77e4d9860.herokuapp.com/data/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -55,7 +55,7 @@ export default function List() {
       setFieldName('');
     
       // Send request to delete data from the server
-      await fetch(`http://localhost:3030/data/${id}`, {
+      await fetch(`https://mit-seo-server-28d77e4d9860.herokuapp.com/data/${id}`, {
           method: "DELETE",
           headers: {
               "Content-Type": "application/json",
