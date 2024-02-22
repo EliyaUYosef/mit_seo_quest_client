@@ -11,7 +11,7 @@ export default function List() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch("https://mit-seo-server-28d77e4d9860.herokuapp.com/data/data");
+      const response = await fetch("https://mit-seo-server-28d77e4d9860.herokuapp.com/data");
       const jsonData = await response.json();
       jsonData
               .sort((a,b) => a.question_id - b.question_id)
