@@ -75,6 +75,7 @@
        url('/path/to/Inter-Regular.woff') format('woff');
   letter-spacing: .7px;
   line-height: 125%;
+  background-color: #f9f9f9;
 }
 
 .submit_button {
@@ -85,4 +86,7 @@
   border-radius: 7px;
   cursor: pointer;
   margin: 10px;
+}
+.link {
+  float: right;
 }
